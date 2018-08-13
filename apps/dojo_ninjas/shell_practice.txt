@@ -1,0 +1,8 @@
+Create dojo object with attributes
+    Dojo.objects.create(name='CodingDojo Silicon Valley', city='Mountain View', state='CA')
+
+Add ninjas to dojo with id = 1
+    Ninja.objects.create(dojo=Dojo.objects.get(id=1), first_name='John', last_name='Smith')
+
+Retrieve all ninjas in dojo with id = 1
+    Dojo.objects.get(id=1).ninjas.all()
