@@ -24,6 +24,9 @@
             display: inline-block;
             border: 2px solid black;
         }
+        .login{
+            vertical-align: top;
+        }
         button{
             margin-top: 20px;
             display: flex;
@@ -34,13 +37,11 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="flash">        
-        </div>
-        <div class="signup" style="width: 30%">
+        <div class="signup">
             <h1>Sign Up</h1>
             <form action='/register' method='post'>
                 {% csrf_token %}
-                <div class="form-group form-row center">
+                <div class="form-group">
                     <label class="col-form-label">Email Address</label>
                     <input type="text" class="form-control" placeholder="Enter email" name="email">
 
@@ -71,11 +72,11 @@
                 </div>
             </form>
         </div>
-        <div class="login" style="width: 30%">
+        <div class="login">
             <h1>Log In</h1>
             <form action='/login' method='post'>
                 {% csrf_token %}
-                <div class="form-group form-row center">
+                <div class="form-group">
                     <label class="col-form-label">Email Address</label>
                     <input type="text" class="form-control" placeholder="Enter email" name="email">
 
