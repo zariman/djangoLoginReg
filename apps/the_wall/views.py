@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.contrib import messages
-from apps.login_reg.models import User
+from ..login_reg.models import User
 from .models import Message, Comment
 import datetime
 

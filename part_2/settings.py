@@ -33,11 +33,6 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'apps.the_wall',
     'apps.login_reg',
-    'apps.semi_restful',
-    'apps.likes_books',
-    'apps.book_authors',
-    'apps.dojo_ninjas',
-    'apps.user_login',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
