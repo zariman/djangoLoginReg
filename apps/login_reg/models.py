@@ -10,8 +10,12 @@ class UserManager(models.Manager):
         errors = {}
         if len(postData['first_name']) < 2:
             errors['first_name'] = "First name cannot be blank"
+        if len(postData['first_name']) > 255:
+            errors['first_name'] = "First name cannot be more than 255 characters"
         if len(postData['last_name']) < 2:
             errors['last_name'] = "Last name cannot be blank"
+        if len(postData['last_name']) > 255:
+            errors['first_name'] = "Last name cannot be more than 255 characters"
         if not LETTERS_REGEX.match(postData['first_name']):
             errors['name'] = "First name can only be alphabets"
         if not LETTERS_REGEX.match(postData['last_name']):
